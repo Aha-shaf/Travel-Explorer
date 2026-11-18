@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Travel Explorer plans curated trips to Paris, Tokyo, the Maldives, Switzerland, Bali and Dubai, with clear prices and local guides.">
+    <title>Travel Explorer | Curated Travel Packages</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Small plane icon in the browser tab -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- defer: the script runs after the HTML has been read -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ================= HEADER & NAVIGATION ================= -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#home" class="logo">
+                <span class="logo-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
+                    </svg>
+                </span>
+                Travel Explorer
+            </a>
+
+            <!-- Shown only on small screens -->
+            <button type="button" class="nav-toggle" id="navToggle" aria-controls="navList" aria-expanded="false"
+                aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-list" id="navList">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#destinations" class="nav-link">Destinations</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="home">
+            <img class="hero-img" src="images/hero.jpg"
+                alt="Wooden boat on a turquoise mountain lake surrounded by pine trees and rocky peaks" width="1800"
+                height="1000">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <span class="hero-tag">Six destinations &bull; One travel desk</span>
+                <h1>Explore the World, One Journey at a Time</h1>
+                <p>
+                    Handpicked trips to the cities, coastlines and mountains we know best.
+                    Clear prices, comfortable hotels and a real person to call if anything
+                    changes on the way.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#destinations" class="btn btn-primary">Explore Destinations</a>
+                    <a href="#gallery" class="btn btn-outline">View Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DESTINATIONS ================= -->
+        <section class="section" id="destinations">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Where we go</span>
+                    <h2>Six Destinations, Carefully Planned</h2>
+                    <p>
+                        Every trip includes flights, hotels, airport transfers and a local
+                        guide. Filter the list to see the kind of holiday you are after.
+                    </p>
+                </div>
+
+                <!-- Filter buttons: the JavaScript shows only the matching cards -->
+                <div class="filters" role="group" aria-label="Filter destinations by type">
+                    <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All
+                        destinations</button>
+                    <button type="button" class="filter-btn" data-filter="cities" aria-pressed="false">Cities</button>
+                    <button type="button" class="filter-btn" data-filter="beaches" aria-pressed="false">Beaches</button>
+                    <button type="button" class="filter-btn" data-filter="mountains"
+                        aria-pressed="false">Mountains</button>
+                </div>
+
+                <div class="destinations-grid">
+
+                    <article class="card destination-card" id="dest-paris" data-category="cities">
+                        <div class="card-media">
+                            <img src="images/paris.jpg" alt="Eiffel Tower next to the River Seine at sunset" width="800"
+                                height="600" loading="lazy">
+                            <span class="card-tag">City break</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Paris, France</h3>
+                            <p>
+                                The capital of art, fashion and long caf&eacute; lunches. The Eiffel
+                                Tower, the Louvre and quiet streets along the Seine.
+                            </p>
+                            <div class="pkg-details">
+                                <span class="days">5 Days / 4 Nights</span>
+                                <span class="price">$1,200</span>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block js-book"
+                                data-destination="Paris">Book Now</button>
+                        </div>
+                    </article>
+
+                    <article class="card destination-card" id="dest-tokyo" data-category="cities">
+                        <div class="card-media">
+                            <img src="images/tokyo.jpg" alt="Busy Tokyo street at night lit by neon signs" width="800"
+                                height="600" loading="lazy">
+                            <span class="card-tag">City break</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Tokyo, Japan</h3>
+                            <p>
+                                Neon streets, temple gardens and the best food queue in the world.
+                                Tokyo mixes the future and the old city in a single walk.
+                            </p>
+                            <div class="pkg-details">
+                                <span class="days">7 Days / 6 Nights</span>
+                                <span class="price">$1,850</span>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block js-book"
+                                data-destination="Tokyo">Book Now</button>
+                        </div>
+                    </article>
+
+                    <article class="card destination-card" id="dest-maldives" data-category="beaches">
+                        <div class="card-media">
+                            <img src="images/maldives.jpg"
+                                alt="Aerial view of overwater villas on a light blue Maldivian lagoon" width="800"
+                                height="600" loading="lazy">
+                            <span class="card-tag">Beach</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Maldives</h3>
+                            <p>
+                                Wake up above the water, snorkel straight off your deck and watch
+                                the sunset from a private villa on the lagoon.
+                            </p>
+                            <div class="pkg-details">
+                                <span class="days">4 Days / 3 Nights</span>
+                                <span class="price">$2,100</span>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block js-book"
+                                data-destination="Maldives">Book Now</button>
+                        </div>
+                    </article>
+
+                    <article class="card destination-card" id="dest-switzerland" data-category="mountains">
+                        <div class="card-media">
+                            <img src="images/switzerland.jpg"
+                                alt="Green alpine meadows and a lake below snow-covered Swiss mountain peaks" width="800"
+                                height="600" loading="lazy">
+                            <span class="card-tag">Mountain</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Switzerland</h3>
+                            <p>
+                                Alpine villages, glassy lakes and trains that climb into the
+                                snow. A calm, green holiday with postcard views everywhere.
+                            </p>
+                            <div class="pkg-details">
+                                <span class="days">6 Days / 5 Nights</span>
+                                <span class="price">$1,650</span>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block js-book"
+                                data-destination="Switzerland">Book Now</button>
+                        </div>
+                    </article>
+
+                    <article class="card destination-card" id="dest-bali" data-category="beaches">
+                        <div class="card-media">
+                            <img src="images/bali.jpg"
+                                alt="Balinese water temple with tiered thatched roofs reflected in a lake" width="800"
+                                height="600" loading="lazy">
+                            <span class="card-tag">Beach &amp; culture</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Bali, Indonesia</h3>
+                            <p>
+                                Rice terraces in the morning, temples at noon and a beach sunset
+                                in the evening. Bali is equal parts culture and coastline.
+                            </p>
+                            <div class="pkg-details">
+                                <span class="days">5 Days / 4 Nights</span>
+                                <span class="price">$1,100</span>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block js-book"
+                                data-destination="Bali">Book Now</button>
+                        </div>
+                    </article>
+
+                    <article class="card destination-card" id="dest-dubai" data-category="cities">
+                        <div class="card-media">
+                            <img src="images/dubai.jpg"
+                                alt="Dubai skyline at sunset with the Burj Khalifa above the city highways" width="800"
+                                height="600" loading="lazy">
+                            <span class="card-tag">City break</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Dubai, UAE</h3>
+                            <p>
+                                Desert dunes in the morning, the tallest building in the world at
+                                dusk and a night market afterwards. Dubai moves fast.
+                            </p>
+                            <div class="pkg-details">
+                                <span class="days">4 Days / 3 Nights</span>
+                                <span class="price">$1,350</span>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block js-book"
+                                data-destination="Dubai">Book Now</button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALLERY ================= -->
+        <section class="section" id="gallery">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Photo gallery</span>
+                    <h2>Postcards From Our Destinations</h2>
+                    <p>
+                        Click any photo to open it larger. Close it with the × button, the
+                        dark background or the Escape key.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <button type="button" class="photo">
+                        <img src="images/gallery-paris-eiffel.jpg"
+                            alt="Eiffel Tower rising above the rooftops of Paris on a clear day" width="760"
+                            height="560" loading="lazy">
+                        <span class="photo-caption">Paris, France</span>
+                    </button>
+
+                    <button type="button" class="photo">
+                        <img src="images/gallery-paris-bridge.jpg"
+                            alt="Pont Alexandre III bridge lit up at dusk in Paris" width="760" height="560"
+                            loading="lazy">
+                        <span class="photo-caption">Pont Alexandre III, Paris</span>
+                    </button>
+
+                    <button type="button" class="photo">
+                        <img src="images/gallery-tokyo-neon.jpg" alt="Neon signs above a busy Tokyo street at night"
+                            width="760" height="560" loading="lazy">
+                        <span class="photo-caption">Tokyo, Japan</span>
+                    </button>
+
+                    <button type="button" class="photo">
+                        <img src="images/gallery-tokyo-fuji.jpg" alt="Mount Fuji framed by pink cherry blossom branches"
+                            width="760" height="560" loading="lazy">
+                        <span class="photo-caption">Mount Fuji, Japan</span>
+                    </button>
+
+                    <button type="button" class="photo">
+                        <img src="images/gallery-maldives-villas.jpg"
+                            alt="Overwater villas connected by a boardwalk on a turquoise lagoon" width="760"
+                            height="560" loading="lazy">
+                        <span class="photo-caption">Maldives</span>
+                    </button>
+
+                    <button type="button" class="photo">
+                        <img src="images/gallery-maldives-seaplane.jpg"
+                            alt="Seaplane parked on a white sand beach beside palm trees" width="760" height="560"
+                            loading="lazy">
+                        <span class="photo-caption">Island transfer, Maldives</span>
+                    </button>
+
+                    <button type="button" class="photo">
+                        <img src="images/switzerland.jpg"
+                            alt="Green alpine meadows and a lake below snow-covered Swiss mountain peaks" width="800"
+                            height="600" loading="lazy">
+                        <span class="photo-caption">Switzerland</span>
+                    </button>
+
+                    <button type="button" class="photo">
+                        <img src="images/bali.jpg"
+                            alt="Balinese water temple with tiered thatched roofs reflected in a lake" width="800"
+                            height="600" loading="lazy">
+                        <span class="photo-caption">Bali, Indonesia</span>
+                    </button>
+
+                    <button type="button" class="photo">
+                        <img src="images/dubai.jpg"
+                            alt="Dubai skyline at sunset with the Burj Khalifa above the city highways" width="800"
+                            height="600" loading="lazy">
+                        <span class="photo-caption">Dubai, UAE</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= REVIEWS ================= -->
+        <section class="section" id="reviews">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Sample guest stories</span>
+                    <h2>Traveller Reviews</h2>
+                    <p>
+                        The reviews below are sample content used to show the layout. They will
+                        be replaced with verified guest feedback as trips are completed.
+                    </p>
+                </div>
+
+                <div class="reviews-grid">
+
+                    <article class="review-card">
+                        <div class="quote" aria-hidden="true">&#10077;</div>
+                        <div class="stars" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;
+                        </div>
+                        <p>
+                            "Travel Explorer made our Paris vacation unforgettable. Every
+                            detail, from the hotel to the sightseeing tours, was perfectly
+                            organised. We did not have to worry about transport or bookings
+                            at all."
+                        </p>
+                        <div class="reviewer">
+                            <span class="avatar" aria-hidden="true">SM</span>
+                            <div>
+                                <h3>Sarah M.</h3>
+                                <span>Travelled to Paris</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="quote" aria-hidden="true">&#10077;</div>
+                        <div class="stars" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;
+                        </div>
+                        <p>
+                            "Our Tokyo adventure was incredible. The itinerary balanced modern
+                            attractions with traditional temples, every transfer was on time
+                            and the hotels were comfortable. The evening food tour was the
+                            highlight."
+                        </p>
+                        <div class="reviewer">
+                            <span class="avatar" aria-hidden="true">SW</span>
+                            <div>
+                                <h3>Sophia W.</h3>
+                                <span>Travelled to Tokyo</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="quote" aria-hidden="true">&#10077;</div>
+                        <div class="stars" aria-label="Rated 5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;
+                        </div>
+                        <p>
+                            "Our anniversary trip to the Maldives was magical. Crystal-clear
+                            water, a private villa and breathtaking sunsets made it the best
+                            holiday we have ever had. Everything was planned perfectly."
+                        </p>
+                        <div class="reviewer">
+                            <span class="avatar" aria-hidden="true">RN</span>
+                            <div>
+                                <h3>Rahul &amp; Neha</h3>
+                                <span>Travelled to the Maldives</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <span class="eyebrow">About us</span>
+                        <h2>A small team that plans trips properly</h2>
+                        <p>
+                            Travel Explorer started as a notebook full of routes, prices and
+                            hotel recommendations. It is now a travel desk that plans holidays
+                            for people who want a good trip without spending weeks comparing
+                            websites.
+                        </p>
+                        <p>
+                            Our mission is simple: honest pricing, comfortable places to stay
+                            and someone to call when a flight is delayed. We plan a limited
+                            number of trips each month so every guest gets a real person to
+                            talk to before and during the journey.
+                        </p>
+                        <a href="#contact" class="btn btn-primary">Talk to us</a>
+                    </div>
+
+                    <div class="features">
+                        <div class="feature">
+                            <h3>Handpicked hotels</h3>
+                            <p>Every hotel is visited before it goes into a package.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Local guides</h3>
+                            <p>Guides who live in the city, not a script read from a bus.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Clear pricing</h3>
+                            <p>Flights, stays and transfers are included in the price.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Help on the road</h3>
+                            <p>One WhatsApp number that answers while you are travelling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Get in touch</span>
+                    <h2>Plan Your Next Trip</h2>
+                    <p>
+                        Send a message, start a booking request or message us on WhatsApp. We
+                        reply within one working day.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <div class="contact-card">
+                        <h3>Talk to us</h3>
+                        <ul class="info-list">
+                            <li>
+                                <span>Email</span>
+                                <a href="mailto:contact@travelexplorer.com">contact@travelexplorer.com</a>
+                            </li>
+                            <li>
+                                <span>Phone</span>
+                                <a href="tel:+917397625039">+91 73976 25039</a>
+                            </li>
+                            <li>
+                                <span>Office hours</span>
+                                Monday to Saturday, 9:00 - 19:00 IST
+                            </li>
+                            <li>
+                                <span>Based in</span>
+                                Bengaluru, India
+                            </li>
+                        </ul>
+
+                        <a href="https://wa.me/917397625039" class="btn btn-secondary btn-block js-whatsapp"
+                            target="_blank" rel="noopener">Message us on WhatsApp</a>
+                        <button type="button" class="btn btn-primary btn-block js-open-booking">
+                            Start a booking request
+                        </button>
+
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                                aria-label="Travel Explorer on Instagram">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2 .25 2.5.45.6.24 1 .56 1.5 1.05.5.5.8.9 1.05 1.5.2.5.4 1.3.45 2.5.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 2-.45 2.5-.24.6-.56 1-1.05 1.5-.5.5-.9.8-1.5 1.05-.5.2-1.3.4-2.5.45-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2-.25-2.5-.45-.6-.24-1-.56-1.5-1.05-.5-.5-.8-.9-1.05-1.5-.2-.5-.4-1.3-.45-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-2 .45-2.5.24-.6.56-1 1.05-1.5.5-.5.9-.8 1.5-1.05.5-.2 1.3-.4 2.5-.45C8.4 2.2 8.8 2.2 12 2.2zm0 3.05A6.75 6.75 0 1 0 18.75 12 6.75 6.75 0 0 0 12 5.25zm0 11.13A4.38 4.38 0 1 1 16.38 12 4.38 4.38 0 0 1 12 16.38zm6.9-11.4a1.58 1.58 0 1 1-1.58-1.58 1.58 1.58 0 0 1 1.58 1.58z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                                aria-label="Travel Explorer on Facebook">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.7v8h3.5z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                                aria-label="Travel Explorer on YouTube">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M23 12s0-3.4-.4-5c-.2-.9-.9-1.6-1.8-1.8C19 4.8 12 4.8 12 4.8s-7 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 8.6 1 12 1 12s0 3.4.4 5c.2.9.9 1.6 1.8 1.8 1.8.4 8.8.4 8.8.4s7 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-5 .4-5zM9.8 15.5v-7l6 3.5-6 3.5z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>Send a message</h3>
+
+                        <!-- Contact form: validation happens in js/script.js -->
+                        <form class="contact-form" id="contactForm" novalidate>
+                            <div class="form-field">
+                                <label for="contactName">Your name</label>
+                                <input type="text" id="contactName" name="contactName"
+                                    placeholder="e.g. Aisha Khan" autocomplete="name">
+                                <span class="error-text" id="contactNameError"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="contactEmail">Email address</label>
+                                <input type="email" id="contactEmail" name="contactEmail"
+                                    placeholder="you@example.com" autocomplete="email">
+                                <span class="error-text" id="contactEmailError"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="contactMessage">Your message</label>
+                                <textarea id="contactMessage" name="contactMessage"
+                                    placeholder="Where would you like to go, and when?"></textarea>
+                                <span class="error-text" id="contactMessageError"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">Send message</button>
+                            <p class="form-status" id="contactStatus" role="status"></p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-mark" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M2 21l21-9L2 3v7l15 2-15 2z" />
+                            </svg>
+                        </span>
+                        Travel Explorer
+                    </a>
+                    <p>
+                        Curated trips to six destinations, planned by people who have
+                        actually been there.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                            aria-label="Travel Explorer on Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2 .25 2.5.45.6.24 1 .56 1.5 1.05.5.5.8.9 1.05 1.5.2.5.4 1.3.45 2.5.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 2-.45 2.5-.24.6-.56 1-1.05 1.5-.5.5-.9.8-1.5 1.05-.5.2-1.3.4-2.5.45-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2-.25-2.5-.45-.6-.24-1-.56-1.5-1.05-.5-.5-.8-.9-1.05-1.5-.2-.5-.4-1.3-.45-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-2 .45-2.5.24-.6.56-1 1.05-1.5.5-.5.9-.8 1.5-1.05.5-.2 1.3-.4 2.5-.45C8.4 2.2 8.8 2.2 12 2.2zm0 3.05A6.75 6.75 0 1 0 18.75 12 6.75 6.75 0 0 0 12 5.25zm0 11.13A4.38 4.38 0 1 1 16.38 12 4.38 4.38 0 0 1 12 16.38zm6.9-11.4a1.58 1.58 0 1 1-1.58-1.58 1.58 1.58 0 0 1 1.58 1.58z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                            aria-label="Travel Explorer on Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.6V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.7v8h3.5z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener"
+                            aria-label="Travel Explorer on YouTube">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M23 12s0-3.4-.4-5c-.2-.9-.9-1.6-1.8-1.8C19 4.8 12 4.8 12 4.8s-7 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 8.6 1 12 1 12s0 3.4.4 5c.2.9.9 1.6 1.8 1.8 1.8.4 8.8.4 8.8.4s7 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-5 .4-5zM9.8 15.5v-7l6 3.5-6 3.5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Popular destinations</h3>
+                    <ul class="footer-links">
+                        <li><a href="#dest-paris">Paris, France</a></li>
+                        <li><a href="#dest-tokyo">Tokyo, Japan</a></li>
+                        <li><a href="#dest-maldives">Maldives</a></li>
+                        <li><a href="#dest-switzerland">Switzerland</a></li>
+                        <li><a href="#dest-bali">Bali, Indonesia</a></li>
+                        <li><a href="#dest-dubai">Dubai, UAE</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@travelexplorer.com">contact@travelexplorer.com</a></li>
+                        <li><a href="tel:+917397625039">+91 73976 25039</a></li>
+                        <li><a href="https://wa.me/917397625039" class="js-whatsapp" target="_blank"
+                                rel="noopener">WhatsApp</a></li>
+                        <li>Mon - Sat, 9:00 - 19:00 IST</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> Travel Explorer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+    <a href="https://wa.me/917397625039" class="whatsapp-float js-whatsapp" target="_blank" rel="noopener"
+        aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+                d="M12 2a9.9 9.9 0 0 0-8.4 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.5-.3-2.8.9.9-2.7-.3-.5A8 8 0 0 1 12 4zm-3 3.5c-.2 0-.5 0-.7.4-.2.4-.9 1-.9 2.3s1 2.6 1.1 2.8c.1.2 1.8 3 4.5 4.1 2.2.9 2.7.7 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3l-1.7-.8c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.2-.1-1-.4-1.8-1.2-.7-.6-1.1-1.3-1.2-1.5-.1-.2 0-.3.1-.4l.4-.5.3-.5v-.5l-.8-1.8c-.1-.4-.3-.4-.5-.4z" />
+        </svg>
+        <span>Chat with Us</span>
+    </a>
+
+    <!-- ================= BOOKING MODAL ================= -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+            <div class="modal-header">
+                <h2 id="bookingTitle">Book your trip</h2>
+                <button type="button" class="modal-close js-close-booking" aria-label="Close booking form">
+                    &times;
+                </button>
+            </div>
+
+            <p class="modal-subtitle">
+                Tell us a little about your trip and we will get back to you within one
+                working day.
+            </p>
+
+            <!-- Booking form -->
+            <form class="booking-form" id="bookingForm" novalidate>
+                <div class="form-grid">
+
+                    <div class="form-field">
+                        <label for="customerName">Full name</label>
+                        <input type="text" id="customerName" name="customerName" placeholder="e.g. Aisha Khan"
+                            autocomplete="name">
+                        <span class="error-text" id="customerNameError"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com"
+                            autocomplete="email">
+                        <span class="error-text" id="emailError"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel">
+                        <span class="error-text" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="destination">Destination</label>
+                        <select id="destination" name="destination">
+                            <option value="">Select a destination</option>
+                            <option value="Paris">Paris, France</option>
+                            <option value="Tokyo">Tokyo, Japan</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Bali">Bali, Indonesia</option>
+                            <option value="Dubai">Dubai, UAE</option>
+                        </select>
+                        <span class="error-text" id="destinationError"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="travellers">Number of travellers</label>
+                        <input type="number" id="travellers" name="travellers" value="2" min="1" max="20">
+                        <span class="error-text" id="travellersError"></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="travelDate">Travel date</label>
+                        <input type="date" id="travelDate" name="travelDate">
+                        <span class="error-text" id="travelDateError"></span>
+                    </div>
+
+                    <div class="form-field form-field--full">
+                        <label for="notes">Additional requirements (optional)</label>
+                        <textarea id="notes" name="notes"
+                            placeholder="Anything we should know? Dietary needs, room type, celebrations..."></textarea>
+                        <span class="error-text" id="notesError"></span>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Review booking request</button>
+            </form>
+
+            <!-- Confirmation (shown by the JavaScript after a valid form) -->
+            <div class="confirmation" id="confirmationPanel" hidden>
+                <h3>Thank you, <span id="confirmName"></span>!</h3>
+                <p>
+                    Your request is ready. Send it to our travel desk with one click and we
+                    will reply within one working day.
+                </p>
+
+                <ul class="confirmation-list">
+                    <li><span>Destination</span><strong id="confirmDestination"></strong></li>
+                    <li><span>Travel date</span><strong id="confirmDate"></strong></li>
+                    <li><span>Travellers</span><strong id="confirmTravellers"></strong></li>
+                    <li><span>Email</span><strong id="confirmEmail"></strong></li>
+                    <li><span>Phone</span><strong id="confirmPhone"></strong></li>
+                    <li><span>Additional requirements</span><strong id="confirmNotes"></strong></li>
+                </ul>
+
+                <div class="confirmation-actions">
+                    <a href="#" class="btn btn-primary" id="sendRequestWhatsApp" target="_blank"
+                        rel="noopener">Send on WhatsApp</a>
+                    <a href="#" class="btn btn-secondary" id="sendRequestEmail">Send by email</a>
+                    <button type="button" class="btn btn-secondary" id="newRequestBtn">Edit request</button>
+                </div>
+
+                <p class="confirmation-note">
+                    Nothing is sent until you choose one of the buttons above.
+                </p>
+
+                <button type="button" class="btn btn-secondary js-close-booking">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= IMAGE LIGHTBOX ================= -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close image preview">
+            &times;
+        </button>
+        <img id="lightboxImage" src="images/gallery-paris-eiffel.jpg" alt="">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+</body>
+
+</html>
