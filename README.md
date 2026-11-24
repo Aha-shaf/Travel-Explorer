@@ -82,7 +82,7 @@ Travel Explorer is a front-end project and does not include a back end.
 - Add a travel price calculator
 - Expand individual destination galleries
 - Improve the booking workflow
-- Add more destinations
+- Redesign the UI
 
 ## 📚 Credits
 
